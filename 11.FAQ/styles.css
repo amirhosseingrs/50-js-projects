@@ -1,0 +1,126 @@
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/eot/IRANSansWeb_Bold.eot');
+    src: url('../fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/eot/IRANSansWeb_Medium.eot');
+    src: url('../fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/eot/IRANSansWeb_Light.eot');
+    src: url('../fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/eot/IRANSansWeb_UltraLight.eot');
+    src: url('../fonts/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/eot/IRANSansWeb.eot');
+    src: url('../fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+body {
+    font-family : 'myfont';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    background-color:#ddd;
+}
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.question {
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 10px 30px;
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    transition: all .3s ease;
+}
+.question .fa-comments {
+    position: absolute;
+    font-size: 150px;
+    z-index: 0;
+    opacity: .3;
+    left: -20px;
+    top: -20px;
+}
+.question .data {
+    display: none;
+    transition: all .3s ease;
+}
+.question h1{
+    font-size: 24px;
+    text-align: right;
+    z-index: 999;
+    font-weight: lighter;
+}
+.question p {
+    text-align: right;
+}
+.question .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question i.fa-chevron-down , .question i.fa-circle-xmark{
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    z-index: 9999;
+}
+.question i.fa-circle-xmark {
+    font-size: 40px;
+    margin-left: -10px;
+}
+.question i.fa-chevron-down:hover {
+    background-color: gray;
+}
+.active .data{
+    display: block;
+}
+.active {
+    background-color: aliceblue;
+}
