@@ -1,0 +1,121 @@
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/eot/IRANSansWeb_Bold.eot');
+    src: url('../fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/eot/IRANSansWeb_Medium.eot');
+    src: url('../fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/eot/IRANSansWeb_Light.eot');
+    src: url('../fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/eot/IRANSansWeb_UltraLight.eot');
+    src: url('../fonts/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: myfont;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/eot/IRANSansWeb.eot');
+    src: url('../fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/woff2/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+body {
+    font-family : 'myfont';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background : linear-gradient(lightblue 0 50%, dodgerblue 50%);
+    overflow: hidden;
+}
+.container {
+    background-color: #fff;
+    display: flex;
+    padding: 5px 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 #00000069;
+    transition: all 1s linear;
+    height: 72px;
+    align-items: center;
+}
+.container ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    gap: 20px;
+    width: 0px;
+    overflow: hidden;
+    transition: width .6s linear;
+}
+.container ul li {
+    list-style-type: none;
+    opacity: 0;
+    transition: opacity .6s linear, transform .6s linear;
+    transform: rotate(0deg);
+}
+.container ul li a {
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+}
+.container button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    margin: 0 10px;
+}
+.container button .line {
+    width: 30px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    transition: all .5s linear;
+    margin: 8px 0;
+    margin-left: -15px;
+}
+.container.active ul{
+    width: 350px;
+}
+.container.active ul li {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+.container.active button .line:first-child{
+    transform: rotate(-495deg);
+    margin: 0;
+}
+.container.active button .line:last-child{
+    transform: rotate(495deg);
+    margin: 0;
+}
